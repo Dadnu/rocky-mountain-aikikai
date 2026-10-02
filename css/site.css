@@ -203,3 +203,7 @@ blockquote cite { display: block; font-family: var(--body); font-style: normal; 
 @media (max-width: 680px) { .site-footer .wrap { grid-template-columns: 1fr; } }
 
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+
+/* Two lead-instructor portraits side by side (home) */
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.duo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
