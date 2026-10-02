@@ -84,7 +84,7 @@ p { margin: 0 0 1em; max-width: var(--measure); }
 .site-nav a:hover { color: var(--white); }
 .site-nav a[aria-current="page"] { color: var(--white); border-bottom-color: var(--sun); }
 
-@media (max-width: 880px) {
+@media (max-width: 1000px) {
   .nav-toggle { display: block; }
   .site-nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--ink); border-bottom: 1px solid var(--line); }
   .site-nav.open { display: block; }
@@ -207,3 +207,8 @@ blockquote cite { display: block; font-family: var(--body); font-style: normal; 
 /* Two lead-instructor portraits side by side (home) */
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .duo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+
+/* Our dojo: portrait wall */
+.faces { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1.25rem 1rem; }
+.faces img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+@media (min-width: 1001px) { .faces { grid-template-columns: repeat(7, 1fr); } }
