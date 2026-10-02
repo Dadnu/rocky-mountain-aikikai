@@ -212,3 +212,24 @@ blockquote cite { display: block; font-family: var(--body); font-style: normal; 
 .faces { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1.25rem 1rem; }
 .faces img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
 @media (min-width: 1001px) { .faces { grid-template-columns: repeat(7, 1fr); } }
+
+/* Associate instructors: same layout, smaller portrait */
+.lead-instructor.small { grid-template-columns: minmax(180px, 240px) 1fr; margin-bottom: 3.5rem; }
+.lead-instructor .rank { margin-top: -.2rem; }
+@media (max-width: 680px) { .lead-instructor.small { grid-template-columns: 1fr; } .lead-instructor.small img { max-width: 240px; } }
+
+/* Home: enso + club statement */
+.enso-section .wrap { display: grid; grid-template-columns: minmax(200px, 340px) 1fr; gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.enso-section .enso { width: 100%; opacity: .92; }
+.enso-section p { font-size: var(--step-1); line-height: 1.55; color: var(--paper); }
+.enso-section p:last-child { font-size: var(--step-0); }
+@media (max-width: 760px) {
+  .enso-section .wrap { grid-template-columns: 1fr; }
+  .enso-section .enso { width: 160px; }
+}
+
+/* Home: sword-and-mountains band with the club seal */
+.seal { position: relative; height: clamp(260px, 42vw, 520px); overflow: hidden; display: grid; place-items: center; border-top: 1px solid var(--line); }
+.seal-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 70%; filter: grayscale(1) brightness(.55) contrast(1.1); }
+.seal-logo { position: relative; width: clamp(140px, 18vw, 230px); filter: drop-shadow(0 6px 24px rgba(0,0,0,.6)); }
+.announcements.narrow { max-width: 820px; }
